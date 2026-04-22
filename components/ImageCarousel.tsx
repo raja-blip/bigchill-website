@@ -23,6 +23,8 @@ export default function ImageCarousel({
   const prev = () => setIndex((current) => (current - 1 + total) % total);
   const next = () => setIndex((current) => (current + 1) % total);
   const activeImage = images[index];
+  const isFirstSlide = index === 0;
+  const shouldEagerLoad = variant === "hero" || isFirstSlide;
 
   const onTouchStart = (event: TouchEvent<HTMLDivElement>) => {
     setTouchStartX(event.changedTouches[0].clientX);
@@ -55,8 +57,9 @@ export default function ImageCarousel({
           width={1600}
           height={1000}
           sizes={variant === "hero" ? "(max-width: 960px) 100vw, 1120px" : "(max-width: 960px) 100vw, 50vw"}
-          priority={variant === "hero" && index === 0}
-          loading={variant === "hero" && index === 0 ? "eager" : "lazy"}
+          priority={variant === "hero" && isFirstSlide}
+          fetchPriority={variant === "hero" ? "high" : shouldEagerLoad ? "auto" : "low"}
+          loading={shouldEagerLoad ? "eager" : "lazy"}
           className="carousel-image"
         />
       </figure>
