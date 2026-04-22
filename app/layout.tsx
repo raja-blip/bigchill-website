@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | The Big Chill"
   },
   description:
-    "The Big Chill is a premium 2.5-bedroom hill retreat in Wayanad with forest-facing balconies, home-style Malabari food, and unforgettable misty views.",
+    "The Big Chill is a premium 2.5-bedroom hill retreat in Wayanad with forest-facing balconies, home-style food, and unforgettable misty views.",
   alternates: {
     canonical: "/"
   },

@@ -1,8 +1,12 @@
+import ImageCarousel from "@/components/ImageCarousel";
+
 const heroImages = [
   "/images/hero/14_Day Facade_RajaGanesh Villa.jpg",
   "/images/hero/15_Day Facade_RajaGanesh Villa.jpg",
   "/images/hero/1_Evening Facade_Rajaganesh Villa.jpg",
-  "/images/hero/2_Evening Tea_Rajaganesh Villa.jpg"
+  "/images/hero/2_Evening Tea_Rajaganesh Villa.jpg",
+  "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
+  "/images/views-hillock/40_Sunrise_RajaGanesh Villa.jpg"
 ];
 
 const spaceTabs = [
@@ -11,27 +15,46 @@ const spaceTabs = [
     body: "Two expansive king bedrooms on the upper floor, each with a private balcony looking directly into the forest and hillock.",
     images: [
       "/images/master-suite-1/18_Room 1_RajaGanesh Villa.jpg",
-      "/images/master-suite-2/22_Room 2_RajaGanesh Villa.jpg"
+      "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
+      "/images/master-suite-1/20_Room 1_RajaGanesh Villa.jpg",
+      "/images/master-suite-1/21_Room 1_RajaGanesh Villa.jpg",
+      "/images/master-suite-1/35_Room 1 Bathroom_RajaGanesh Villa.jpg",
+      "/images/master-suite-2/22_Room 2_RajaGanesh Villa.jpg",
+      "/images/master-suite-2/23_Room 2_RajaGanesh Villa.jpg",
+      "/images/master-suite-2/24_Room 2_RajaGanesh Villa.jpg",
+      "/images/master-suite-2/37_Room 2 Bathroom_RajaGanesh Villa.jpg"
     ]
   },
   {
     title: "The Study (The +0.5)",
     body: "Our secret weapon. A dedicated study room perfect for a quiet remote-work session or as an extra cozy nook for the kids.",
-    images: ["/images/study/4_Study Room_Rajaganesh Villa.jpg"]
+    images: [
+      "/images/study/4_Study Room_Rajaganesh Villa.jpg",
+      "/images/living-dining/25_Corridor_RajaGanesh Villa.jpg",
+      "/images/exteriors/71_Reading Corner_RajaGanesh Villa.jpg"
+    ]
   },
   {
     title: "Living & Dining",
     body: "Double-height living spaces designed for slow mornings. A 6-seater dining area where the family actually gathers.",
     images: [
       "/images/living-dining/10_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/7_Dining_RajaGanesh Villa.jpg"
+      "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
+      "/images/living-dining/12_Living Room_RajaGanesh Villa.jpg",
+      "/images/living-dining/5_Living Room_RajaGanesh Villa.jpg",
+      "/images/living-dining/6_Living Room_RajaGanesh Villa.jpg",
+      "/images/living-dining/7_Dining_RajaGanesh Villa.jpg",
+      "/images/living-dining/8_Dining_RajaGanesh Villa.jpg"
     ]
   }
 ];
 
 const foodImages = [
   "/images/kitchen-food/50_Breakfast_RajaGanesh Villa.jpg",
+  "/images/kitchen-food/9_Kitchen_RajaGanesh Villa.jpg",
   "/images/kids-corner/59_Sandpit_RajaGanesh Villa.jpg",
+  "/images/kids-corner/58_Badminton_RajaGanesh Villa.jpg",
+  "/images/kids-corner/sandpit.JPG",
   "/images/kids-corner/swing.JPG"
 ];
 
@@ -96,18 +119,6 @@ const structuredData = {
   sameAs: ["https://www.stayvista.com/villa/the-big-chill"]
 };
 
-function ImageStrip({ images, title }: { images: string[]; title: string }) {
-  return (
-    <div className="image-strip" aria-label={title}>
-      {images.map((image) => (
-        <figure key={image} className="tile">
-          <img src={image} alt={title} loading="lazy" />
-        </figure>
-      ))}
-    </div>
-  );
-}
-
 export default function HomePage() {
   return (
     <main>
@@ -124,14 +135,20 @@ export default function HomePage() {
           </a>
         </nav>
 
-        <ImageStrip images={heroImages} title="Hero highlights of The Big Chill" />
+        <div className="container">
+          <ImageCarousel
+            images={heroImages}
+            title="Hero highlights of The Big Chill"
+            variant="hero"
+          />
+        </div>
 
         <section className="hero-copy">
           <p className="eyebrow">Wayanad, Kerala</p>
           <h1>The Big Chill: A Hillock Sanctuary in Wayanad.</h1>
           <p>
-            More than a stay-a 2.5-bedroom retreat for 6, where mist-covered peaks
-            meet home-cooked Malabari flavors.
+            More than a stay - a 2.5-bedroom retreat for 6, where mist-covered peaks
+            meet home-style comfort food.
           </p>
           <div className="cta-group">
             <a href="#experience" className="btn btn-primary">
@@ -155,7 +172,7 @@ export default function HomePage() {
             <article key={tab.title} className="card">
               <h3>{tab.title}</h3>
               <p>{tab.body}</p>
-              <ImageStrip images={tab.images} title={tab.title} />
+              <ImageCarousel images={tab.images} title={tab.title} />
             </article>
           ))}
         </div>
@@ -165,17 +182,18 @@ export default function HomePage() {
         <div className="container">
           <h2>Food & Heart</h2>
           <p className="section-intro">
-            Warm hospitality from Babul and Amarendra, and food that feels like home.
+            Warm hospitality from Babul, and food that feels like home.
           </p>
           <p>
-            From local Kerala Sadhya to custom-cooked comfort food. Breakfast is on
-            us; lunch and dinner are crafted on demand to your spice preference.
+            From North Indian and South Indian comfort dishes to custom-cooked
+            favorites. Breakfast is on us; lunch and dinner are crafted on demand to
+            your spice preference.
           </p>
           <p>
             While the resident cook preps your meal, let the kids enjoy the sand pit
             and swing in their own playful corner.
           </p>
-          <ImageStrip images={foodImages} title="Food and family spaces" />
+          <ImageCarousel images={foodImages} title="Food and family spaces" />
         </div>
       </section>
 
@@ -210,11 +228,14 @@ export default function HomePage() {
               <li key={place}>{place}</li>
             ))}
           </ul>
-          <ImageStrip
+          <ImageCarousel
             images={[
+              "/images/experiences-wayanad/chembra peak.jpg",
               "/images/experiences-wayanad/lakkidi view point.jpg",
               "/images/experiences-wayanad/banasura sagar dam.webp",
-              "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg"
+              "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg",
+              "/images/experiences-wayanad/edakkal caves.webp",
+              "/images/experiences-wayanad/thirunelli-temple.jpg"
             ]}
             title="Nearby places in Wayanad"
           />

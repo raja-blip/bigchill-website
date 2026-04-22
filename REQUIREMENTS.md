@@ -197,7 +197,7 @@ Use this as the default creative direction for v1 copy and section flow.
 
 - **UI:** Full-bleed background video or high-res hero image.
 - **Headline:** `The Big Chill: A Hillock Sanctuary in Wayanad.`
-- **Sub-headline:** `More than a stay—a 2.5-bedroom retreat for 6, where mist-covered peaks meet home-cooked Malabari flavors.`
+- **Sub-headline:** `More than a stay—a 2.5-bedroom retreat for 6, where mist-covered peaks meet home-style comfort food.`
 - **Primary CTA:** `View the Experience`
 - **Secondary CTA:** Prefer `Contact Us`; if included, `Find us on StayVista` as low-emphasis text/button.
 
@@ -212,8 +212,8 @@ Use this as the default creative direction for v1 copy and section flow.
 ### 10A.3 Food & heart section (differentiator)
 
 - **UI:** Polaroid-style grid or masonry carousel.
-- **Caretakers:** Feature Babul/Amarendra with warmth and hospitality-led copy.
-- **Food narrative:** `From local Kerala Sadhya to custom-cooked comfort food. Breakfast is on us; lunch and dinner are crafted on-demand to your spice preference.`
+- **Caretaker:** Feature Babul with warmth and hospitality-led copy.
+- **Food narrative:** `From North Indian and South Indian comfort dishes to custom-cooked favorites. Breakfast is on us; lunch and dinner are crafted on-demand to your spice preference.`
 - **Kids' corner:** Highlight sand pit and swing with family-friendly messaging.
 
 ### 10A.4 Nature & seasons section (hillock view calendar)
