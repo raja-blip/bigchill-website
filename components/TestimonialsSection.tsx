@@ -20,7 +20,7 @@ type TestimonialsSectionProps = {
   ratingSources: RatingSource[];
 };
 
-const AUTO_ADVANCE_MS = 10000;
+const AUTO_ADVANCE_MS = 5000;
 const SWIPE_THRESHOLD = 40;
 const STAR_MAX = 5;
 

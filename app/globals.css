@@ -425,11 +425,18 @@ h3 {
   .season-grid,
   .faq-grid,
   .food-grid,
-  .testimonials-layout,
   .contact-travel-layout,
   .route-grid,
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonials-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-carousel {
+    min-height: 0;
   }
 }
 
@@ -451,5 +458,9 @@ h3 {
   .route-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-carousel {
+    padding: 1rem 2.7rem;
   }
 }
