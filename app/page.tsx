@@ -377,7 +377,7 @@ const testimonials = [
 const ratingSources = [
   {
     label: "Google Reviews",
-    rating: 5,
+    rating: 4.8,
     reviewCount: 35,
     href: "https://www.google.com/travel/hotels/entity/CgsI_5L9m4fLiqX3ARAB/reviews?q=the%20big%20chill%20wayanad&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72880339%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaBAoCGgAqBAoAGgA&qs=CAE4Ag&ictx=111&utm_campaign=sharing&utm_medium=link&utm_source=htls"
   },
