@@ -232,6 +232,69 @@ h3 {
   gap: 0.75rem;
 }
 
+.testimonials-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-carousel {
+  position: relative;
+  min-height: 220px;
+  border-radius: 0.9rem;
+  border: 1px solid #dfeadf;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #f9fcf8 0%, #f0f7f1 100%);
+  touch-action: pan-y;
+}
+
+.testimonial-quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.testimonial-guest {
+  margin: 1.1rem 0 0;
+  font-weight: 600;
+}
+
+.testimonial-source {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.rating-summary {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.rating-card {
+  border: 1px solid #dfebdf;
+}
+
+.rating-label {
+  margin: 0;
+  font-weight: 700;
+}
+
+.rating-stars {
+  margin: 0.45rem 0 0.2rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  color: #d28f1d;
+}
+
+.rating-number {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+}
+
 .food-grid {
   margin-top: 1rem;
   display: grid;
@@ -362,6 +425,7 @@ h3 {
   .season-grid,
   .faq-grid,
   .food-grid,
+  .testimonials-layout,
   .contact-travel-layout,
   .route-grid,
   .gallery-grid {

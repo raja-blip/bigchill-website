@@ -1,6 +1,6 @@
-# Big Chill Wayanad — Website Requirements Specification (Draft)
+# Big Chill Wayanad — Website Requirements Specification (v1 Final)
 
-**Document status:** Draft for review  
+**Document status:** v1 implemented  
 **Property context:** Vacation villa in Wayanad, Kerala, India  
 **Site branding:** **The Big Chill** — this site is the property’s own presence; it does **not** present itself as a StayVista property page.  
 **Primary domain:** [bigchillwayanad.com](https://bigchillwayanad.com) (Hostinger DNS → planned Vercel hosting)  
@@ -69,48 +69,64 @@ Build a **fast, attractive, mobile-first marketing site** for **The Big Chill** 
 
 ---
 
-## 5. Information architecture (proposed)
+## 5. Information architecture (implemented)
 
 | Area | Purpose |
 |------|---------|
 | **Home** | Emotional hook, hero, key USPs, **Contact** as primary CTA, teaser for gallery & locality. |
-| **The villa** | Rooms, capacity, amenities, house rules summary, what’s included, FAQs. |
+| **The villa** | Four visual cards with carousels: Master Suites, Study, Living & Dining, Exterior & Views. |
 | **Gallery** | Curated property photos (categories: exteriors, pool, interiors, views, details). |
 | **Wayanad & things to do** | Local experiences, nature, food, drives — optimised for “things to do near …” style queries. |
 | **Guest experience / reviews** | Short testimonials on-site + link(s) to **Google reviews**; optional link to StayVista listing **only** if useful for extra guest photos/reviews (same tone as “find us on…”). |
 | **Location & getting here** | Map embed, directions, nearest towns/airports, parking. |
-| **Contact** | Email, phone, optional WhatsApp; optional short note on how you prefer to be reached. **Optional same page:** text link “Find us on StayVista” → listing URL (new tab). |
+| **Contact + How to get there** | Split layout: contact email + StayVista booking link on one side; map + travel routes on the other side. |
 | **Policies** (light) | Privacy for any forms/analytics; other policy copy only if you want it on-site. |
 
 **Optional later:** Blog or “guides” for long-tail SEO (out of scope for v1 unless requested).
 
 ---
 
-## 6. Functional requirements
+## 6. Functional requirements (implemented)
 
 ### 6.1 Primary: Contact
 
-- **Contact page** (or section): **Email** and **phone** clearly shown; optional **WhatsApp** button/link.  
-- **Click-to-call** (`tel:`), **mailto** for email.  
-- Optional v1.1: **Contact form** (spam protection, privacy note) if you want to avoid publishing a raw email address.
+- **Contact page** (and homepage section): contact email is shown as the primary method.  
+- **Current contact email:** `thebigchill.wayanad@gmail.com`  
+- **No web form in v1** (removed by preference to keep UX minimal).  
 
 ### 6.2 Optional: StayVista (not promotional)
 
 - **One** low-key link, e.g. label **“Find us on StayVista”** (or “See our listing on StayVista”), pointing to **`https://www.stayvista.com/villa/the-big-chill`**, typically on **Contact** or in **footer** — not in the hero, not co-logo’d with StayVista.  
 - **No** requirement to mention bookings, availability, or “book now” for StayVista on this site.
 
-### 6.3 Reviews & social proof
+### 6.3 How to get there (implemented)
 
-- On-page **2–6 short quotes** with attribution (guest first name + context, or “Verified guest” if anonymised).  
-- Outbound links: **Google Business / Google reviews** URL (preferred for trust).  
-- Optional: same **StayVista** listing URL only if you want readers to see more reviews there — still secondary to Google if both exist.
+- Google Maps context is shown with reference to **Mananthavady**.  
+- Map reference link: `https://maps.app.goo.gl/SKXcBdUBbDQwz7zU6`  
+- Two route cards are shown with images:  
+  - Drive from Bangalore via Mysore + Nagarhole  
+  - Fly to Kannur/Kozhikode and drive via scenic mountain roads
 
-### 6.4 Media
+### 6.4 Reviews & social proof
 
-- **Image optimisation:** Modern formats (e.g. WebP/AVIF where supported), responsive `srcset`, lazy loading below the fold.  
+- Place a dedicated **“What Guests Say”** section **immediately before FAQ**.  
+- Replace static quotes with a **testimonial carousel**:
+  - Show **10 curated 5-star reviews** (mix of Google + StayVista where possible).  
+  - Select reviews from a maintained pool and rotate the visible set in each deploy/content refresh to keep the section fresh.  
+  - **Auto-advance every 10 seconds**.  
+  - Include **manual controls** (swipe/drag on touch, arrows, and dots) and pause auto-advance on user interaction.  
+  - Each card should show quote text + source badge (`Google` / `StayVista`) + guest name (or “Verified guest” if anonymised).  
+- Add a compact **ratings summary block** adjacent to (desktop) or below (mobile) the carousel:
+  - `Google Reviews`: star graphic + current average rating + review count if available.  
+  - `StayVista`: star graphic + current average rating + review count if available.  
+- Outbound links: keep direct links to full review pages for source verification.
+
+### 6.5 Media
+
+- **Image optimisation completed:** uploaded source media batch-compressed for faster page load and first-scroll performance.  
 - Optional: Short **ambient video** loop (muted, poster image, no autoplay with sound).
 
-### 6.5 Location
+### 6.6 Location
 
 - Embedded map (Google Maps or OpenStreetMap-based embed — preference TBD) with villa pin or approximate area if privacy desired.
 
@@ -172,19 +188,19 @@ Build a **fast, attractive, mobile-first marketing site** for **The Big Chill** 
 
 ---
 
-## 10. Content checklist (owner inputs needed)
+## 10. Content checklist (status)
 
-- [ ] Final property **name** and tagline  
+- [x] Final property **name** and tagline  
 - [x] StayVista **listing URL** — `https://www.stayvista.com/villa/the-big-chill`  
-- [ ] **Google Maps** link or Business Profile link  
-- [ ] **Google reviews** URL  
+- [x] **Google Maps** link or Business Profile link — `https://maps.app.goo.gl/SKXcBdUBbDQwz7zU6`  
+- [x] **Google reviews** URL — `https://www.google.com/travel/hotels/entity/CgsI_5L9m4fLiqX3ARAB/reviews?q=the%20big%20chill%20wayanad&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72880339%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaBAoCGgAqBAoAGgA&qs=CAE4Ag&ictx=111&utm_campaign=sharing&utm_medium=link&utm_source=htls`  
 - [ ] **Phone** (+ WhatsApp number if different)  
-- [ ] **Email** (optional public)  
-- [ ] **Photo set** (high-res originals for optimisation pipeline)  
+- [x] **Email** — `thebigchill.wayanad@gmail.com`  
+- [x] **Photo set** uploaded and optimised for web performance  
 - [ ] **Testimonials** (permission to publish)  
-- [ ] **Capacity**, bedrooms/bathrooms, **amenities** list, **house rules** summary  
-- [ ] **Things to do** shortlist (owner picks + distances if known)  
-- [ ] **FAQ** answers  
+- [x] **Capacity**, bedrooms/bathrooms, **amenities** narrative included in current copy  
+- [x] **Things to do** shortlist included in current copy  
+- [x] **FAQ** answers implemented (expanded)  
 - [ ] **Social links** (Instagram, etc.) if any  
 
 ---
@@ -248,30 +264,28 @@ Use this as the default creative direction for v1 copy and section flow.
 
 ---
 
-## 12. Phasing (suggested)
+## 12. Phasing (current)
 
 | Phase | Deliverable |
 |-------|-------------|
-| **v1** | All core pages, SEO baseline, **Contact**-first UX, optional “Find us on StayVista” link, optimised gallery, Google/reviews links as available, Vercel live on domain. |
-| **v1.1** | Contact form, richer structured data, optional blog/guides. |
+| **v1** | Delivered: core pages, SEO baseline, Contact-first UX, StayVista link, optimised media, map + travel section, social preview metadata, Vercel deployment. |
+| **v1.1** | Optional next: testimonial carousel (10 rotating 5-star reviews), ratings summary cards (Google + StayVista), blog/guides. |
 | **v2** | Video, multilingual, advanced analytics experiments. |
 
 ---
 
-## 13. Open questions
+## 13. Open items
 
-1. **Precise map pin** vs approximate area for guest privacy.  
-2. Preferred **analytics** and appetite for cookies.  
-3. **Languages:** English-only for launch?  
-4. **WhatsApp** as primary direct channel vs phone.  
-5. Any **trademark** or photography usage constraints from StayVista or photographers (relevant if you deep-link or screenshot their UI).
+1. Preferred **analytics** and cookie policy approach.  
+2. **Languages:** English-only for launch or multilingual soon.  
+3. Share canonical **StayVista reviews/source URL** for quote extraction + rating sync.
 
 ---
 
-## 14. Acceptance (draft)
+## 14. Acceptance
 
-v1 is accepted when: site is live on **bigchillwayanad.com**, passes basic SEO checklist (sitemap, meta, structured data, social previews), meets agreed mobile performance bar, and owner can update **copy/links/images** via agreed workflow.
+v1 is accepted when: site is live on **bigchillwayanad.com**, passes baseline SEO checklist (sitemap, meta, structured data, social previews), meets mobile performance expectations, and owner can update copy/links/images via the repository workflow.
 
 ---
 
-*End of draft — refine remaining checklist items (Google, phone, photos, etc.) before build kickoff.*
+*End of v1 final spec snapshot.*

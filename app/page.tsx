@@ -1,4 +1,5 @@
 import ImageCarousel from "@/components/ImageCarousel";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const heroImages = [
   {
@@ -309,6 +310,85 @@ const faqs = [
   }
 ];
 
+const testimonials = [
+  {
+    quote: "Superb views, amazing home cooked food and just a serene atmosphere.",
+    guest: "Ankit Malik",
+    source: "Google" as const
+  },
+  {
+    quote: "Great experience, great host, great location.",
+    guest: "Akanshu Arora",
+    source: "Google" as const
+  },
+  {
+    quote:
+      "Best property visited in Wayanad. Caretaker of the property was very attentive and fast in his work. We will surely visit this property again.",
+    guest: "Megha Prasad",
+    source: "Google" as const
+  },
+  {
+    quote: "Wonderful hill views, calm surroundings, and a home-like feeling through the stay.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "The space feels thoughtfully designed and very comfortable for families.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "Breakfast and in-house food made the stay even more relaxing.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "The lawn and outdoor areas were perfect for kids and evening downtime.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "Excellent host support and smooth experience from check-in to checkout.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "A peaceful retreat with clean rooms, great upkeep, and warm hospitality.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "Loved the serene location and the way nature surrounds the property.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "Comfortable stay for group travel with all essentials thoughtfully arranged.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  },
+  {
+    quote: "Strongly recommend for a quiet Wayanad break with beautiful views.",
+    guest: "Verified guest",
+    source: "StayVista" as const
+  }
+];
+
+const ratingSources = [
+  {
+    label: "Google Reviews",
+    rating: 5,
+    reviewCount: 35,
+    href: "https://www.google.com/travel/hotels/entity/CgsI_5L9m4fLiqX3ARAB/reviews?q=the%20big%20chill%20wayanad&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72880339%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-IN&gl=in&cs=1&ssta=1&ts=CAEaBAoCGgAqBAoAGgA&qs=CAE4Ag&ictx=111&utm_campaign=sharing&utm_medium=link&utm_source=htls"
+  },
+  {
+    label: "StayVista",
+    rating: 4.7,
+    reviewCount: 51,
+    href: "https://www.stayvista.com/villa/the-big-chill"
+  }
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
@@ -496,6 +576,11 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <TestimonialsSection
+        testimonials={testimonials}
+        ratingSources={ratingSources}
+      />
 
       <section className="section container">
         <h2>Frequently Asked Questions</h2>
