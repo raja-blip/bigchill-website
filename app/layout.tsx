@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://bigchillwayanad.com";
+const socialPreviewImage =
+  "/images/exteriors/WhatsApp%20Image%202026-04-22%20at%2011.39.02.jpeg?v=2";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,10 +25,10 @@ export const metadata: Metadata = {
       "Discover The Big Chill in Wayanad: a 2.5-bedroom retreat for six with sunrise views, warm hospitality, and a nature-first experience.",
     images: [
       {
-        url: "/images/hero/14_Day Facade_RajaGanesh Villa.jpg",
-        width: 1600,
-        height: 900,
-        alt: "The Big Chill exterior view"
+        url: socialPreviewImage,
+        width: 1200,
+        height: 630,
+        alt: "The Big Chill villa preview"
       }
     ]
   },
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     title: "The Big Chill | Hillock Sanctuary in Wayanad",
     description:
       "A premium forest-facing villa retreat in Wayanad with curated local experiences.",
-    images: ["/images/hero/14_Day Facade_RajaGanesh Villa.jpg"]
+    images: [socialPreviewImage]
   },
   robots: {
     index: true,

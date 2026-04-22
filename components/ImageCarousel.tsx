@@ -57,6 +57,7 @@ export default function ImageCarousel({
           width={1600}
           height={1000}
           sizes={variant === "hero" ? "(max-width: 960px) 100vw, 1120px" : "(max-width: 960px) 100vw, 50vw"}
+          unoptimized
           priority={variant === "hero" && isFirstSlide}
           fetchPriority={variant === "hero" ? "high" : shouldEagerLoad ? "auto" : "low"}
           loading={shouldEagerLoad ? "eager" : "lazy"}
