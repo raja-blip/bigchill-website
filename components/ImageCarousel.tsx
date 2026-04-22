@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 type ImageCarouselProps = {
-  images: string[];
+  images: Array<{ src: string; alt: string }>;
   title: string;
   variant?: "hero" | "section";
 };
@@ -24,7 +24,11 @@ export default function ImageCarousel({
   return (
     <div className={`carousel carousel-${variant}`} aria-label={title}>
       <figure className="carousel-frame">
-        <img src={images[index]} alt={title} loading={variant === "hero" ? "eager" : "lazy"} />
+        <img
+          src={images[index].src}
+          alt={images[index].alt || title}
+          loading={variant === "hero" ? "eager" : "lazy"}
+        />
       </figure>
 
       {total > 1 && (
@@ -49,7 +53,7 @@ export default function ImageCarousel({
           <div className="carousel-dots" aria-hidden="true">
             {images.map((image, dotIndex) => (
               <button
-                key={image}
+                key={image.src}
                 type="button"
                 className={`carousel-dot ${dotIndex === index ? "active" : ""}`}
                 onClick={() => setIndex(dotIndex)}

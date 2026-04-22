@@ -1,12 +1,31 @@
 import ImageCarousel from "@/components/ImageCarousel";
+import ContactForm from "@/components/ContactForm";
 
 const heroImages = [
-  "/images/hero/14_Day Facade_RajaGanesh Villa.jpg",
-  "/images/hero/15_Day Facade_RajaGanesh Villa.jpg",
-  "/images/hero/1_Evening Facade_Rajaganesh Villa.jpg",
-  "/images/hero/2_Evening Tea_Rajaganesh Villa.jpg",
-  "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
-  "/images/views-hillock/40_Sunrise_RajaGanesh Villa.jpg"
+  {
+    src: "/images/hero/14_Day Facade_RajaGanesh Villa.jpg",
+    alt: "Day facade of The Big Chill villa in Wayanad"
+  },
+  {
+    src: "/images/hero/15_Day Facade_RajaGanesh Villa.jpg",
+    alt: "Front approach to The Big Chill surrounded by greenery"
+  },
+  {
+    src: "/images/hero/1_Evening Facade_Rajaganesh Villa.jpg",
+    alt: "Evening exterior lighting at The Big Chill"
+  },
+  {
+    src: "/images/hero/2_Evening Tea_Rajaganesh Villa.jpg",
+    alt: "Outdoor tea setup with sunset view at The Big Chill"
+  },
+  {
+    src: "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
+    alt: "Drone view of The Big Chill and its private grounds"
+  },
+  {
+    src: "/images/views-hillock/40_Sunrise_RajaGanesh Villa.jpg",
+    alt: "Sunrise over the hillock seen from The Big Chill"
+  }
 ];
 
 const spaceTabs = [
@@ -14,48 +33,123 @@ const spaceTabs = [
     title: "The Master Suites",
     body: "Two expansive king bedrooms on the upper floor, each with a private balcony looking directly into the forest and hillock.",
     images: [
-      "/images/master-suite-1/18_Room 1_RajaGanesh Villa.jpg",
-      "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
-      "/images/master-suite-1/20_Room 1_RajaGanesh Villa.jpg",
-      "/images/master-suite-1/21_Room 1_RajaGanesh Villa.jpg",
-      "/images/master-suite-1/35_Room 1 Bathroom_RajaGanesh Villa.jpg",
-      "/images/master-suite-2/22_Room 2_RajaGanesh Villa.jpg",
-      "/images/master-suite-2/23_Room 2_RajaGanesh Villa.jpg",
-      "/images/master-suite-2/24_Room 2_RajaGanesh Villa.jpg",
-      "/images/master-suite-2/37_Room 2 Bathroom_RajaGanesh Villa.jpg"
+      {
+        src: "/images/master-suite-1/18_Room 1_RajaGanesh Villa.jpg",
+        alt: "Master suite one with king bed and warm interiors"
+      },
+      {
+        src: "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
+        alt: "Master suite one alternate angle with balcony access"
+      },
+      {
+        src: "/images/master-suite-1/20_Room 1_RajaGanesh Villa.jpg",
+        alt: "Seating and layout details in master suite one"
+      },
+      {
+        src: "/images/master-suite-1/21_Room 1_RajaGanesh Villa.jpg",
+        alt: "Forest-facing perspective from master suite one"
+      },
+      {
+        src: "/images/master-suite-1/35_Room 1 Bathroom_RajaGanesh Villa.jpg",
+        alt: "Bathroom attached to master suite one"
+      },
+      {
+        src: "/images/master-suite-2/22_Room 2_RajaGanesh Villa.jpg",
+        alt: "Master suite two with king bed and natural light"
+      },
+      {
+        src: "/images/master-suite-2/23_Room 2_RajaGanesh Villa.jpg",
+        alt: "Master suite two layout and furnishing details"
+      },
+      {
+        src: "/images/master-suite-2/24_Room 2_RajaGanesh Villa.jpg",
+        alt: "Second master suite balcony-facing setup"
+      },
+      {
+        src: "/images/master-suite-2/37_Room 2 Bathroom_RajaGanesh Villa.jpg",
+        alt: "Bathroom attached to master suite two"
+      }
     ]
   },
   {
     title: "The Study (The +0.5)",
     body: "Our secret weapon. A dedicated study room perfect for a quiet remote-work session or as an extra cozy nook for the kids.",
     images: [
-      "/images/study/4_Study Room_Rajaganesh Villa.jpg",
-      "/images/living-dining/25_Corridor_RajaGanesh Villa.jpg",
-      "/images/exteriors/71_Reading Corner_RajaGanesh Villa.jpg"
+      {
+        src: "/images/study/4_Study Room_Rajaganesh Villa.jpg",
+        alt: "Dedicated study room for work and reading"
+      },
+      {
+        src: "/images/living-dining/25_Corridor_RajaGanesh Villa.jpg",
+        alt: "Quiet corridor connecting private spaces"
+      },
+      {
+        src: "/images/exteriors/71_Reading Corner_RajaGanesh Villa.jpg",
+        alt: "Reading corner overlooking greenery"
+      }
     ]
   },
   {
     title: "Living & Dining",
     body: "Double-height living spaces designed for slow mornings. A 6-seater dining area where the family actually gathers.",
     images: [
-      "/images/living-dining/10_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/12_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/5_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/6_Living Room_RajaGanesh Villa.jpg",
-      "/images/living-dining/7_Dining_RajaGanesh Villa.jpg",
-      "/images/living-dining/8_Dining_RajaGanesh Villa.jpg"
+      {
+        src: "/images/living-dining/10_Living Room_RajaGanesh Villa.jpg",
+        alt: "Double-height living room at The Big Chill"
+      },
+      {
+        src: "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
+        alt: "Living room with seating and large windows"
+      },
+      {
+        src: "/images/living-dining/12_Living Room_RajaGanesh Villa.jpg",
+        alt: "Living room corner for family lounging"
+      },
+      {
+        src: "/images/living-dining/5_Living Room_RajaGanesh Villa.jpg",
+        alt: "Wide-angle living room interior"
+      },
+      {
+        src: "/images/living-dining/6_Living Room_RajaGanesh Villa.jpg",
+        alt: "Living room detail shot"
+      },
+      {
+        src: "/images/living-dining/7_Dining_RajaGanesh Villa.jpg",
+        alt: "Six-seater dining area"
+      },
+      {
+        src: "/images/living-dining/8_Dining_RajaGanesh Villa.jpg",
+        alt: "Dining setup for shared meals"
+      }
     ]
   }
 ];
 
 const foodImages = [
-  "/images/kitchen-food/50_Breakfast_RajaGanesh Villa.jpg",
-  "/images/kitchen-food/9_Kitchen_RajaGanesh Villa.jpg",
-  "/images/kids-corner/59_Sandpit_RajaGanesh Villa.jpg",
-  "/images/kids-corner/58_Badminton_RajaGanesh Villa.jpg",
-  "/images/kids-corner/sandpit.JPG",
-  "/images/kids-corner/swing.JPG"
+  {
+    src: "/images/kitchen-food/50_Breakfast_RajaGanesh Villa.jpg",
+    alt: "Fresh breakfast served at The Big Chill"
+  },
+  {
+    src: "/images/kitchen-food/9_Kitchen_RajaGanesh Villa.jpg",
+    alt: "Kitchen space at The Big Chill"
+  },
+  {
+    src: "/images/kids-corner/59_Sandpit_RajaGanesh Villa.jpg",
+    alt: "Kids sand pit in the play area"
+  },
+  {
+    src: "/images/kids-corner/58_Badminton_RajaGanesh Villa.jpg",
+    alt: "Outdoor badminton setup for guests"
+  },
+  {
+    src: "/images/kids-corner/sandpit.JPG",
+    alt: "Dedicated play corner for children"
+  },
+  {
+    src: "/images/kids-corner/swing.JPG",
+    alt: "Swing in the kids activity area"
+  }
 ];
 
 const seasonCards = [
@@ -88,18 +182,77 @@ const nearby = [
 ];
 
 const allGallery = [
-  "/images/exteriors/53_RajaGanesh Villa.jpg",
-  "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
-  "/images/views-hillock/40_Sunrise_RajaGanesh Villa.jpg",
-  "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
-  "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
-  "/images/master-suite-2/23_Room 2_RajaGanesh Villa.jpg",
-  "/images/kitchen-food/9_Kitchen_RajaGanesh Villa.jpg",
-  "/images/kids-corner/58_Badminton_RajaGanesh Villa.jpg",
-  "/images/experiences-wayanad/banasura sagar dam.webp",
-  "/images/experiences-wayanad/chembra peak.jpg",
-  "/images/experiences-wayanad/edakkal caves.webp",
-  "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg"
+  {
+    src: "/images/exteriors/53_RajaGanesh Villa.jpg",
+    alt: "Exterior view of The Big Chill villa"
+  },
+  {
+    src: "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
+    alt: "Aerial view of The Big Chill in Wayanad"
+  },
+  {
+    src: "/images/views-hillock/40_Sunrise_RajaGanesh Villa.jpg",
+    alt: "Sunrise view from The Big Chill"
+  },
+  {
+    src: "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
+    alt: "Living room interior at The Big Chill"
+  },
+  {
+    src: "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
+    alt: "Master bedroom interior at The Big Chill"
+  },
+  {
+    src: "/images/master-suite-2/23_Room 2_RajaGanesh Villa.jpg",
+    alt: "Second bedroom interior at The Big Chill"
+  },
+  {
+    src: "/images/kitchen-food/9_Kitchen_RajaGanesh Villa.jpg",
+    alt: "Kitchen and meal preparation space"
+  },
+  {
+    src: "/images/kids-corner/58_Badminton_RajaGanesh Villa.jpg",
+    alt: "Recreation area for guests and kids"
+  },
+  {
+    src: "/images/experiences-wayanad/banasura sagar dam.webp",
+    alt: "Banasura Sagar Dam in Wayanad"
+  },
+  {
+    src: "/images/experiences-wayanad/chembra peak.jpg",
+    alt: "Chembra Peak trekking landscape"
+  },
+  {
+    src: "/images/experiences-wayanad/edakkal caves.webp",
+    alt: "Edakkal Caves attraction near Wayanad"
+  },
+  {
+    src: "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg",
+    alt: "Wayanad wildlife sanctuary experience"
+  }
+];
+
+const faqs = [
+  {
+    question: "How many guests can The Big Chill host?",
+    answer:
+      "The villa is designed for up to 6 guests across two master suites and an additional study-nook style +0.5 room."
+  },
+  {
+    question: "What food can guests expect?",
+    answer:
+      "Guests can enjoy home-style North Indian and South Indian meals. Breakfast is included, with lunch and dinner prepared on request."
+  },
+  {
+    question: "Is The Big Chill suitable for families with kids?",
+    answer:
+      "Yes. Families often choose The Big Chill for the open spaces, sand pit, swing, and calm hill setting."
+  },
+  {
+    question: "How can I enquire about dates and pricing?",
+    answer:
+      "Use the Contact section to call or email directly. You can also view the listing on StayVista as an additional reference."
+  }
 ];
 
 const structuredData = {
@@ -109,7 +262,7 @@ const structuredData = {
   description:
     "A premium 2.5-bedroom hillock retreat in Wayanad for up to 6 guests.",
   url: "https://bigchillwayanad.com",
-  image: heroImages,
+  image: heroImages.map((image) => image.src),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Wayanad",
@@ -119,6 +272,19 @@ const structuredData = {
   sameAs: ["https://www.stayvista.com/villa/the-big-chill"]
 };
 
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
+};
+
 export default function HomePage() {
   return (
     <main>
@@ -126,15 +292,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
 
       <header className="hero">
-        <nav className="nav">
-          <p className="brand">The Big Chill</p>
-          <a href="#contact" className="text-link">
-            Contact
-          </a>
-        </nav>
-
         <div className="container">
           <ImageCarousel
             images={heroImages}
@@ -193,7 +356,13 @@ export default function HomePage() {
             While the resident cook preps your meal, let the kids enjoy the sand pit
             and swing in their own playful corner.
           </p>
-          <ImageCarousel images={foodImages} title="Food and family spaces" />
+          <div className="food-grid" aria-label="Food and family spaces">
+            {foodImages.slice(0, 6).map((image) => (
+              <figure className="food-item" key={image.src}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -230,12 +399,30 @@ export default function HomePage() {
           </ul>
           <ImageCarousel
             images={[
-              "/images/experiences-wayanad/chembra peak.jpg",
-              "/images/experiences-wayanad/lakkidi view point.jpg",
-              "/images/experiences-wayanad/banasura sagar dam.webp",
-              "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg",
-              "/images/experiences-wayanad/edakkal caves.webp",
-              "/images/experiences-wayanad/thirunelli-temple.jpg"
+              {
+                src: "/images/experiences-wayanad/chembra peak.jpg",
+                alt: "Chembra Peak trail in Wayanad"
+              },
+              {
+                src: "/images/experiences-wayanad/lakkidi view point.jpg",
+                alt: "View from Lakkidi viewpoint"
+              },
+              {
+                src: "/images/experiences-wayanad/banasura sagar dam.webp",
+                alt: "Banasura Sagar Dam landscape"
+              },
+              {
+                src: "/images/experiences-wayanad/tholpetty-wildlife-sanctuary.jpg",
+                alt: "Wildlife spotting near Wayanad sanctuary"
+              },
+              {
+                src: "/images/experiences-wayanad/edakkal caves.webp",
+                alt: "Edakkal Caves near Wayanad"
+              },
+              {
+                src: "/images/experiences-wayanad/thirunelli-temple.jpg",
+                alt: "Thirunelli Temple in Wayanad"
+              }
             ]}
             title="Nearby places in Wayanad"
           />
@@ -249,9 +436,21 @@ export default function HomePage() {
         </p>
         <div className="gallery-grid">
           {allGallery.map((image) => (
-            <figure className="gallery-item" key={image}>
-              <img src={image} alt="The Big Chill gallery" loading="lazy" />
+            <figure className="gallery-item" key={image.src}>
+              <img src={image.src} alt={image.alt} loading="lazy" />
             </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="section container">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq-grid">
+          {faqs.map((faq) => (
+            <article className="card" key={faq.question}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </article>
           ))}
         </div>
       </section>
@@ -263,13 +462,14 @@ export default function HomePage() {
         </p>
         <div className="contact-box">
           <p>
-            Phone: <a href="tel:+919999999999">+91 99999 99999</a>
+            Email:{" "}
+            <a href="mailto:thebigchill.wayanad@gmail.com">
+              thebigchill.wayanad@gmail.com
+            </a>
           </p>
-          <p>
-            Email: <a href="mailto:hello@bigchillwayanad.com">hello@bigchillwayanad.com</a>
-          </p>
-          <p className="small">
-            Prefer StayVista?{" "}
+          <ContactForm />
+          <p className="small booking-link">
+            For Bookings:{" "}
             <a
               href="https://www.stayvista.com/villa/the-big-chill"
               target="_blank"
