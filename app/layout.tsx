@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteUrl = "https://bigchillwayanad.com";
 const socialPreviewImage =
-  "/images/exteriors/WhatsApp%20Image%202026-04-22%20at%2011.39.02.jpeg?v=2";
+  "/images/hero/14_Day%20Facade_RajaGanesh%20Villa.jpg?v=3";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
