@@ -163,7 +163,7 @@ const spaceTabs = [
         alt: "Evening exterior ambience at The Big Chill"
       },
       {
-        src: "/images/exteriors/jackfruit.HEIC",
+        src: "/images/exteriors/Jackfruit.jpg",
         alt: "Jackfruit tree and natural surroundings at the villa"
       }
     ]
@@ -228,7 +228,7 @@ const nearby = [
 
 const allGallery = [
   {
-    src: "/images/exteriors/53_RajaGanesh Villa.jpg",
+    src: "/images/exteriors/34_Balcony View_RajaGanesh Villa.jpg",
     alt: "Exterior view of The Big Chill villa"
   },
   {
@@ -264,7 +264,7 @@ const allGallery = [
     alt: "Banasura Sagar Dam in Wayanad"
   },
   {
-    src: "/images/experiences-wayanad/chembra peak.jpg",
+    src: "/images/experiences-wayanad/Chembra Peak.png",
     alt: "Chembra Peak trekking landscape"
   },
   {
@@ -297,6 +297,15 @@ const faqs = [
     question: "How can I enquire about dates and pricing?",
     answer:
       "Use the Contact section to call or email directly. You can also view the listing on StayVista as an additional reference."
+  },
+  {
+    question: "What is the best time to visit The Big Chill?",
+    answer:
+      "You can visit throughout the year as the experiences are different in each season - summer, monsoon, and winter. Refer to the Nature & Seasons section above."
+  },
+  {
+    question: "Can one book for longer duration staycation?",
+    answer: "Please get in touch with us directly for the same."
   }
 ];
 
@@ -445,7 +454,7 @@ export default function HomePage() {
           <ImageCarousel
             images={[
               {
-                src: "/images/experiences-wayanad/chembra peak.jpg",
+                src: "/images/experiences-wayanad/Chembra Peak.png",
                 alt: "Chembra Peak trail in Wayanad"
               },
               {
