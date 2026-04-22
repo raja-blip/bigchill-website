@@ -1,6 +1,7 @@
 "use client";
 
-import { TouchEvent, useMemo, useState } from "react";
+import Image from "next/image";
+import { TouchEvent, useState } from "react";
 
 type ImageCarouselProps = {
   images: Array<{ src: string; alt: string }>;
@@ -22,8 +23,6 @@ export default function ImageCarousel({
   const prev = () => setIndex((current) => (current - 1 + total) % total);
   const next = () => setIndex((current) => (current + 1) % total);
   const activeImage = images[index];
-
-  const nextImage = useMemo(() => images[(index + 1) % total], [images, index, total]);
 
   const onTouchStart = (event: TouchEvent<HTMLDivElement>) => {
     setTouchStartX(event.changedTouches[0].clientX);
@@ -49,18 +48,18 @@ export default function ImageCarousel({
       onTouchEnd={onTouchEnd}
     >
       <figure className="carousel-frame">
-        <img
+        <Image
           key={`${activeImage.src}-${index}`}
           src={activeImage.src}
           alt={activeImage.alt || title}
-          loading={variant === "hero" ? "eager" : "lazy"}
-          decoding="async"
+          width={1600}
+          height={1000}
+          sizes={variant === "hero" ? "(max-width: 960px) 100vw, 1120px" : "(max-width: 960px) 100vw, 50vw"}
+          priority={variant === "hero" && index === 0}
+          loading={variant === "hero" && index === 0 ? "eager" : "lazy"}
+          className="carousel-image"
         />
       </figure>
-
-      {/* Preload upcoming image to reduce perceived "stuck" transitions */}
-      {total > 1 ? <img src={nextImage.src} alt="" className="carousel-preload" /> : null}
-
       {total > 1 && (
         <>
           <button
