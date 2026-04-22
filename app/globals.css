@@ -151,6 +151,7 @@ h3 {
 .carousel {
   position: relative;
   margin-top: 0.75rem;
+  touch-action: pan-y;
 }
 
 .carousel-frame {
@@ -203,6 +204,14 @@ h3 {
   justify-content: center;
   gap: 0.4rem;
   margin-top: 0.55rem;
+}
+
+.carousel-preload {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .carousel-dot {
