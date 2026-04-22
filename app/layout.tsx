@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://bigchillwayanad.com";
-const socialPreviewImage =
-  "/images/hero/14_Day%20Facade_RajaGanesh%20Villa.jpg?v=3";
+const socialPreviewImage = "/og-preview.jpg?v=4";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
