@@ -438,6 +438,10 @@ h3 {
   .testimonial-carousel {
     min-height: 0;
   }
+
+  .rating-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -462,5 +466,9 @@ h3 {
 
   .testimonial-carousel {
     padding: 1rem 2.7rem;
+  }
+
+  .rating-card {
+    padding: 0.85rem;
   }
 }
