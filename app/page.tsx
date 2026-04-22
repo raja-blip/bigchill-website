@@ -77,14 +77,6 @@ const spaceTabs = [
       {
         src: "/images/study/4_Study Room_Rajaganesh Villa.jpg",
         alt: "Dedicated study room for work and reading"
-      },
-      {
-        src: "/images/living-dining/25_Corridor_RajaGanesh Villa.jpg",
-        alt: "Quiet corridor connecting private spaces"
-      },
-      {
-        src: "/images/exteriors/71_Reading Corner_RajaGanesh Villa.jpg",
-        alt: "Reading corner overlooking greenery"
       }
     ]
   },
@@ -99,6 +91,10 @@ const spaceTabs = [
       {
         src: "/images/living-dining/11_Living Room_RajaGanesh Villa.jpg",
         alt: "Living room with seating and large windows"
+      },
+      {
+        src: "/images/living-dining/25_Corridor_RajaGanesh Villa.jpg",
+        alt: "Quiet corridor connecting living spaces"
       },
       {
         src: "/images/living-dining/12_Living Room_RajaGanesh Villa.jpg",
@@ -119,6 +115,56 @@ const spaceTabs = [
       {
         src: "/images/living-dining/8_Dining_RajaGanesh Villa.jpg",
         alt: "Dining setup for shared meals"
+      }
+    ]
+  },
+  {
+    title: "Exterior & Views",
+    body: "Relax in the lawn, balcony, or simply unwind with the great views around The Big Chill.",
+    images: [
+      {
+        src: "/images/exteriors/16_View from_RajaGanesh Villa.jpg",
+        alt: "View from the villa exterior"
+      },
+      {
+        src: "/images/exteriors/34_Balcony View_RajaGanesh Villa.jpg",
+        alt: "Balcony view at The Big Chill"
+      },
+      {
+        src: "/images/exteriors/40_Sunrise_RajaGanesh Villa.jpg",
+        alt: "Sunrise view near the exterior lawn"
+      },
+      {
+        src: "/images/exteriors/43_Sunrise_RajaGanesh Villa.jpg",
+        alt: "Morning hill view from the villa"
+      },
+      {
+        src: "/images/exteriors/48_Sitout_RajaGanesh Villa.jpg",
+        alt: "Outdoor sitout area at The Big Chill"
+      },
+      {
+        src: "/images/exteriors/71_Reading Corner_RajaGanesh Villa.jpg",
+        alt: "Reading corner in the exterior zone"
+      },
+      {
+        src: "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
+        alt: "Drone view of The Big Chill exterior"
+      },
+      {
+        src: "/images/exteriors/80_Drone_RajaGanesh Villa.jpg",
+        alt: "Aerial exterior view with surrounding greenery"
+      },
+      {
+        src: "/images/exteriors/84_Drone_RajaGanesh Villa.jpg",
+        alt: "High-angle drone shot of property grounds"
+      },
+      {
+        src: "/images/exteriors/WhatsApp Image 2026-04-22 at 11.39.02.jpeg",
+        alt: "Evening exterior ambience at The Big Chill"
+      },
+      {
+        src: "/images/exteriors/jackfruit.HEIC",
+        alt: "Jackfruit tree and natural surroundings at the villa"
       }
     ]
   }

@@ -113,7 +113,12 @@ h3 {
   border-color: #cad9cf;
 }
 
-.tabs-grid,
+.tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .season-grid,
 .faq-grid {
   display: grid;
