@@ -4,7 +4,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 const heroImages = [
   {
     src: "/images/hero/14_Day Facade_RajaGanesh Villa.jpg",
-    alt: "Day facade of The Big Chill villa in Wayanad"
+    alt: "Day facade of a serene farm-side retreat in Mananthavady, Wayanad"
   },
   {
     src: "/images/hero/15_Day Facade_RajaGanesh Villa.jpg",
@@ -16,7 +16,7 @@ const heroImages = [
   },
   {
     src: "/images/hero/2_Evening Tea_Rajaganesh Villa.jpg",
-    alt: "Outdoor tea setup with sunset view at The Big Chill"
+    alt: "Outdoor tea setup for a serene farm-side stay at The Big Chill in Wayanad"
   },
   {
     src: "/images/exteriors/75_Drone_RajaGanesh Villa.jpg",
@@ -35,7 +35,7 @@ const spaceTabs = [
     images: [
       {
         src: "/images/master-suite-1/18_Room 1_RajaGanesh Villa.jpg",
-        alt: "Master suite one with king bed and warm interiors"
+        alt: "Master suite one for a serene stay in Mananthavady"
       },
       {
         src: "/images/master-suite-1/19_Room 1_RajaGanesh Villa.jpg",
@@ -77,7 +77,7 @@ const spaceTabs = [
     images: [
       {
         src: "/images/study/4_Study Room_Rajaganesh Villa.jpg",
-        alt: "Dedicated study room for work and reading"
+        alt: "Dedicated study room for a farm-side retreat in Wayanad"
       }
     ]
   },
@@ -307,6 +307,11 @@ const faqs = [
   {
     question: "Can one book for longer duration staycation?",
     answer: "Please get in touch with us directly for the same."
+  },
+  {
+    question: "Is the villa suitable for a relaxing family retreat?",
+    answer:
+      "Absolutely. With private hillock-view balconies, a dedicated kids' corner, and a serene farm-side location just 2km from Mananthavady, we specialize in quiet retreats for families."
   }
 ];
 
@@ -394,15 +399,40 @@ const structuredData = {
   "@type": "VacationRental",
   name: "The Big Chill",
   description:
-    "A premium 2.5-bedroom hillock retreat in Wayanad for up to 6 guests.",
+    "A premium farm-side family retreat in Wayanad for relaxing, serene stays overlooking the hillock.",
   url: "https://bigchillwayanad.com",
   image: heroImages.map((image) => image.src),
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Wayanad",
+    addressLocality: "Mananthavady",
     addressRegion: "Kerala",
+    postalCode: "670645",
     addressCountry: "IN"
   },
+  keywords:
+    "Serene stay Wayanad, Farm retreat Kerala, Family retreat Mananthavady, Relaxing hillock villa",
+  amenityFeature: [
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Hillock View Balcony",
+      value: true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "In-house Chef",
+      value: true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Kids Sandpit & Play Area",
+      value: true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Quiet Farm-side Location",
+      value: true
+    }
+  ],
   sameAs: ["https://www.stayvista.com/villa/the-big-chill"]
 };
 
@@ -442,7 +472,7 @@ export default function HomePage() {
 
         <section className="hero-copy">
           <p className="eyebrow">Wayanad, Kerala</p>
-          <h1>The Big Chill: A Hillock Sanctuary in Wayanad.</h1>
+          <h1>The Big Chill: A Serene Hillock Sanctuary in Wayanad.</h1>
           <p>
             More than a stay - a 2.5-bedroom retreat for 6, where mist-covered peaks
             meet home-style comfort food.
@@ -459,10 +489,10 @@ export default function HomePage() {
       </header>
 
       <section id="experience" className="section container">
-        <h2>The Space: 2.5 Bedrooms & Beyond</h2>
+        <h2>The Villa: A Family Retreat Overlooking the Hillock</h2>
         <p className="section-intro">
-          A clear view of how the home flows, from private retreats to shared
-          gathering spaces.
+          A clear view of how the home flows across 2 master suites + 1 dedicated
+          study, from private retreats to shared gathering spaces.
         </p>
         <div className="tabs-grid">
           {spaceTabs.map((tab) => (
@@ -477,7 +507,7 @@ export default function HomePage() {
 
       <section className="section section-accent">
         <div className="container">
-          <h2>Food & Heart</h2>
+          <h2>Home-Style Dining & Hospitality</h2>
           <p className="section-intro">
             Warm hospitality from Babul, and food that feels like home.
           </p>
@@ -501,7 +531,7 @@ export default function HomePage() {
       </section>
 
       <section className="section container">
-        <h2>Nature & Seasons</h2>
+        <h2>A Relaxing Stay Amidst Serene Greenery</h2>
         <p className="section-intro">
           Choose your version of Wayanad: misty, golden, or monsoon emerald.
         </p>

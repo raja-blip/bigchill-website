@@ -7,19 +7,19 @@ const socialPreviewImage = "/og-preview-1200.jpg?v=5";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "The Big Chill | Hillock Sanctuary in Wayanad",
+    default: "The Big Chill | Serene Hillock Sanctuary & Family Retreat in Wayanad",
     template: "%s | The Big Chill"
   },
   description:
-    "The Big Chill is a premium 2.5-bedroom hill retreat in Wayanad with forest-facing balconies, home-style food, and unforgettable misty views.",
+    "The Big Chill is a premium hillock sanctuary in Wayanad designed for relaxing stays and family retreats, featuring farm-facing balconies, serene surroundings, and home-style dining near Mananthavady.",
   alternates: {
-    canonical: "/"
+    canonical: siteUrl
   },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "The Big Chill",
-    title: "The Big Chill | Hillock Sanctuary in Wayanad",
+    title: "The Big Chill | Serene Hillock Sanctuary & Family Retreat in Wayanad",
     description:
       "Discover The Big Chill in Wayanad: a 2.5-bedroom retreat for six with sunrise views, warm hospitality, and a nature-first experience.",
     images: [
