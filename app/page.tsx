@@ -397,11 +397,15 @@ const ratingSources = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
+  "@id": "https://www.bigchillwayanad.com/#vacation-rental",
+  identifier: "big-chill-wayanad-001",
   name: "The Big Chill",
   description:
     "A premium farm-side family retreat in Wayanad for relaxing, serene stays overlooking the hillock.",
-  url: "https://bigchillwayanad.com",
-  image: heroImages.map((image) => image.src),
+  url: "https://www.bigchillwayanad.com",
+  image: heroImages.map(
+    (image) => `https://www.bigchillwayanad.com${image.src}`
+  ),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Mananthavady",
@@ -409,6 +413,28 @@ const structuredData = {
     postalCode: "670645",
     addressCountry: "IN"
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 11.605,
+    longitude: 76.083
+  },
+  containsPlace: [
+    {
+      "@type": "Accommodation",
+      name: "Master Suite 1",
+      description: "Upper-floor king suite with a private balcony and forest view."
+    },
+    {
+      "@type": "Accommodation",
+      name: "Master Suite 2",
+      description: "Upper-floor king suite with a private balcony and hillock view."
+    },
+    {
+      "@type": "Accommodation",
+      name: "Study (+0.5 Room)",
+      description: "Multi-purpose study room usable as a compact additional sleeping nook."
+    }
+  ],
   keywords:
     "Serene stay Wayanad, Farm retreat Kerala, Family retreat Mananthavady, Relaxing hillock villa",
   amenityFeature: [
@@ -433,7 +459,10 @@ const structuredData = {
       value: true
     }
   ],
-  sameAs: ["https://www.stayvista.com/villa/the-big-chill"]
+  sameAs: [
+    "https://www.stayvista.com/villa/the-big-chill",
+    "https://www.bigchillwayanad.com"
+  ]
 };
 
 const faqStructuredData = {
