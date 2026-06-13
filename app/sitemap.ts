@@ -1,28 +1,13 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
+
+const pages = ["/", "/gallery", "/things-to-do", "/location", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
-    {
-      url: "https://bigchillwayanad.com",
-      lastModified
-    },
-    {
-      url: "https://bigchillwayanad.com/gallery",
-      lastModified
-    },
-    {
-      url: "https://bigchillwayanad.com/things-to-do",
-      lastModified
-    },
-    {
-      url: "https://bigchillwayanad.com/location",
-      lastModified
-    },
-    {
-      url: "https://bigchillwayanad.com/contact",
-      lastModified
-    }
-  ];
+  return pages.map((path) => ({
+    url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
+    lastModified
+  }));
 }

@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Location",
   description:
-    "Find The Big Chill in Wayanad, Kerala. Discover nearby landmarks, wildlife zones, and directions for your stay."
+    "Find The Big Chill in Wayanad, Kerala. Discover nearby landmarks, wildlife zones, and directions for your stay.",
+  alternates: {
+    canonical: "/location"
+  }
 };
 
 export default function LocationPage() {

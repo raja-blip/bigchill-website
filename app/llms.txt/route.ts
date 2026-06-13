@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/site";
+
 export function GET() {
   const body = `# The Big Chill
 
@@ -11,11 +13,11 @@ The Big Chill is a 2.5-bedroom villa retreat in Wayanad, Kerala, India.
 - Listing reference: https://www.stayvista.com/villa/the-big-chill
 
 ## Primary pages
-- https://bigchillwayanad.com/
-- https://bigchillwayanad.com/gallery
-- https://bigchillwayanad.com/things-to-do
-- https://bigchillwayanad.com/location
-- https://bigchillwayanad.com/contact
+- ${SITE_URL}/
+- ${SITE_URL}/gallery
+- ${SITE_URL}/things-to-do
+- ${SITE_URL}/location
+- ${SITE_URL}/contact
 `;
 
   return new Response(body, {

@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Things To Do In Wayanad",
   description:
-    "Plan your trip from The Big Chill with nearby attractions including Banasura Sagar Dam, Chembra Peak, wildlife spots, and local nature trails."
+    "Plan your trip from The Big Chill with nearby attractions including Banasura Sagar Dam, Chembra Peak, wildlife spots, and local nature trails.",
+  alternates: {
+    canonical: "/things-to-do"
+  }
 };
 
 const places = [

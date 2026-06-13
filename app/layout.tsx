@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = "https://bigchillwayanad.com";
 const socialPreviewImage = "/og-preview-1200.jpg?v=5";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "The Big Chill | Serene Hillock Sanctuary & Family Retreat in Wayanad",
     template: "%s | The Big Chill"
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   description:
     "The Big Chill is a premium hillock sanctuary in Wayanad designed for relaxing stays and family retreats, featuring farm-facing balconies, serene surroundings, and home-style dining near Mananthavady.",
   alternates: {
-    canonical: siteUrl
+    canonical: "/"
   },
   openGraph: {
     type: "website",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "The Big Chill",
     title: "The Big Chill | Serene Hillock Sanctuary & Family Retreat in Wayanad",
     description:

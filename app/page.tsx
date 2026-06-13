@@ -1,5 +1,6 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { SITE_URL } from "@/lib/site";
 
 const heroImages = [
   {
@@ -397,14 +398,14 @@ const ratingSources = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
-  "@id": "https://www.bigchillwayanad.com/#vacation-rental",
+  "@id": `${SITE_URL}/#vacation-rental`,
   identifier: "big-chill-wayanad-001",
   name: "The Big Chill",
   description:
     "A premium farm-side family retreat in Wayanad for relaxing, serene stays overlooking the hillock.",
-  url: "https://www.bigchillwayanad.com",
+  url: SITE_URL,
   image: heroImages.map(
-    (image) => `https://www.bigchillwayanad.com${image.src}`
+    (image) => `${SITE_URL}${image.src}`
   ),
   address: {
     "@type": "PostalAddress",
@@ -461,7 +462,7 @@ const structuredData = {
   ],
   sameAs: [
     "https://www.stayvista.com/villa/the-big-chill",
-    "https://www.bigchillwayanad.com"
+    SITE_URL
   ]
 };
 
