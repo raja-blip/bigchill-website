@@ -403,7 +403,7 @@ const structuredData = {
   name: "The Big Chill",
   description:
     "A premium farm-side family retreat in Wayanad for relaxing, serene stays overlooking the hillock.",
-  url: SITE_URL,
+  url: `${SITE_URL}/`,
   image: heroImages.map(
     (image) => `${SITE_URL}${image.src}`
   ),
@@ -462,7 +462,7 @@ const structuredData = {
   ],
   sameAs: [
     "https://www.stayvista.com/villa/the-big-chill",
-    SITE_URL
+    SITE_URL + "/"
   ]
 };
 

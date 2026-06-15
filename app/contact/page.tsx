@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact The Big Chill directly for dates, pricing, and trip planning in Wayanad. Call, email, or view the listing on StayVista.",
-  alternates: {
-    canonical: "/contact"
-  }
+    "Contact The Big Chill directly for dates, pricing, and trip planning in Wayanad. Call, email, or view the listing on StayVista."
 };
 
 export default function ContactPage() {

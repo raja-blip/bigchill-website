@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   description:
     "The Big Chill is a premium hillock sanctuary in Wayanad designed for relaxing stays and family retreats, featuring farm-facing balconies, serene surroundings, and home-style dining near Mananthavady.",
   alternates: {
-    canonical: "/"
+    canonical: "./"
   },
   openGraph: {
     type: "website",
-    url: SITE_URL,
+    url: "./",
     siteName: "The Big Chill",
     title: "The Big Chill | Serene Hillock Sanctuary & Family Retreat in Wayanad",
     description:

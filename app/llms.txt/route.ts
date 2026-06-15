@@ -14,10 +14,10 @@ The Big Chill is a 2.5-bedroom villa retreat in Wayanad, Kerala, India.
 
 ## Primary pages
 - ${SITE_URL}/
-- ${SITE_URL}/gallery
-- ${SITE_URL}/things-to-do
-- ${SITE_URL}/location
-- ${SITE_URL}/contact
+- ${SITE_URL}/gallery/
+- ${SITE_URL}/things-to-do/
+- ${SITE_URL}/location/
+- ${SITE_URL}/contact/
 `;
 
   return new Response(body, {

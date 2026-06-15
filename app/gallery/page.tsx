@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Browse photos of The Big Chill in Wayanad: villa exteriors, suites, views, food moments, and nearby experiences.",
-  alternates: {
-    canonical: "/gallery"
-  }
+    "Browse photos of The Big Chill in Wayanad: villa exteriors, suites, views, food moments, and nearby experiences."
 };
 
 const galleryImages = [
